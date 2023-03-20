@@ -1,4 +1,4 @@
-package de.goodyear;
+package de.atruvia;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

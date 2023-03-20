@@ -1,6 +1,7 @@
 package de.atruvia.collections;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -20,6 +21,7 @@ class StapelTest {
         objectUnderTest = new Stapel();
     }
 
+    @DisplayName("should return true when isEmpty called on emtpty Stack")
     @Test
     void isEmpty_leererStapel_returnsTrue() {
         // Arrange
@@ -54,7 +56,9 @@ class StapelTest {
     void push_Overflow_throwsStapelException() throws Exception{
         // Arrange Act + Assertion
         fillUpToLimit();
-        assertThrows(StapelException.class, ()->objectUnderTest.push(10));
+        StapelException ex = assertThrows(StapelException.class, ()->objectUnderTest.push(10));
+        assertEquals("Overflow", ex.getMessage());
+
     }
 
     private void fillUpToLimit() {

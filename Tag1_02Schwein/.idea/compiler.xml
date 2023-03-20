@@ -9,13 +9,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Tag1_05PersonenService" />
       </profile>
-      <profile name="Annotation profile for blank" enabled="true">
+      <profile name="Annotation profile for schwein" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar" />
         </processorPath>
+        <module name="Tag1_02Schwein" />
         <module name="blank" />
       </profile>
     </annotationProcessing>

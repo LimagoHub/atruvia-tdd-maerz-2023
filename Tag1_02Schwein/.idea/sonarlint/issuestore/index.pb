@@ -5,3 +5,5 @@ W
 'src/test/java/de/goodyear/TestTest.java,5\3\53531812a6d09defc7ac699e8954c9a06f28a740
 7
 pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+[
++src/main/java/de/atruvia/tiere/Schwein.java,8\a\8aac1ed232a523d6c7941fbd51a84b7dbc06af24
