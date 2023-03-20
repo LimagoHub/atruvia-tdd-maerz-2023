@@ -7,9 +7,12 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class PersonenServiceImplTest {
@@ -43,5 +46,32 @@ class PersonenServiceImplTest {
         Person invalid = Person.builder().id("1").vorname("John").nachname(null).build();
         PersonenServiceException ex = assertThrows(PersonenServiceException.class,()->objectUnderTest.speichern(invalid));
         assertEquals("Nachname zu kurz", ex.getMessage());
+    }
+
+    @Test
+    void speichern_nachnametooShort_throwsPersonenServiceException() throws Exception{
+        Person invalid = Person.builder().id("1").vorname("John").nachname("D").build();
+        PersonenServiceException ex = assertThrows(PersonenServiceException.class,()->objectUnderTest.speichern(invalid));
+        assertEquals("Nachname zu kurz", ex.getMessage());
+    }
+    @Test
+    void speichern_invalidNameAttila_throwsPersonenServiceException() throws Exception{
+        Person invalid = Person.builder().id("1").vorname("Attila").nachname("Doe").build();
+        PersonenServiceException ex = assertThrows(PersonenServiceException.class,()->objectUnderTest.speichern(invalid));
+        assertEquals("Unerwuenschte Person", ex.getMessage());
+    }
+
+    @Test
+    void speichern_unexpectedExceptionInUnderLyingService_throwsPersonenServiceException() throws Exception{
+
+        // Wenn Methode nicht void
+        //when().thenThrow
+
+        doThrow(ArithmeticException.class).when(repoMock).save(any());
+
+        Person valid = Person.builder().id("1").vorname("Joe").nachname("Doe").build();
+        PersonenServiceException ex = assertThrows(PersonenServiceException.class,()->objectUnderTest.speichern(valid));
+        assertEquals("Interner Fehler", ex.getMessage());
+        assertEquals(ArithmeticException.class, ex.getCause().getClass());
     }
 }

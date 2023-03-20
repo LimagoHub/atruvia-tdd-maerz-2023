@@ -1,6 +1,7 @@
 package de.limago.webapp.service.internal;
 
 import de.limago.webapp.repository.PersonenRepository;
+import de.limago.webapp.repository.entities.PersonEntity;
 import de.limago.webapp.service.PersonenService;
 import de.limago.webapp.service.PersonenServiceException;
 import de.limago.webapp.service.mapper.PersonMapper;
@@ -35,11 +36,19 @@ public class PersonenServiceImpl implements PersonenService {
 
     @Override
     public void speichern(Person person) throws PersonenServiceException {
-        if(person == null)
-            throw new PersonenServiceException("Person darf nicht null sein");
-        if(person.getVorname() == null || person.getVorname().length() < 2)
-            throw new PersonenServiceException("Vorname zu kurz");
-        throw new PersonenServiceException("Nachname zu kurz");
+        try {
+            if(person == null)
+                throw new PersonenServiceException("Person darf nicht null sein");
+            if(person.getVorname() == null || person.getVorname().length() < 2)
+                throw new PersonenServiceException("Vorname zu kurz");
+            if(person.getNachname() == null || person.getNachname().length() < 2)
+                throw new PersonenServiceException("Nachname zu kurz");
+            if("attila".equalsIgnoreCase(person.getVorname()))
+                throw new PersonenServiceException("Unerwuenschte Person");
+            repo.save(PersonEntity.builder().build());
+        } catch (RuntimeException e) {
+            throw new PersonenServiceException("Interner Fehler", e);
+        }
     }
 
     @Override
