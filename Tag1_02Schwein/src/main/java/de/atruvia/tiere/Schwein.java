@@ -14,13 +14,15 @@ public class Schwein {
     @Setter(AccessLevel.PRIVATE)
     private int gewicht;
 
+    public static final int DEFAULT_WEIGHT = 10;
+
     public Schwein() {
         this("Nobody");
     }
 
     public Schwein(String name) {
         setName(name);
-        setGewicht(10);
+        setGewicht(DEFAULT_WEIGHT);
     }
 
 
