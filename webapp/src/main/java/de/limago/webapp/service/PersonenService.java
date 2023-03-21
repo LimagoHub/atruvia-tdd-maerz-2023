@@ -7,6 +7,7 @@ import java.util.Optional;
 public interface PersonenService {
 
     void speichern(Person person) throws PersonenServiceException;
+    void speichern(String vorname, String nachname) throws PersonenServiceException;
     void aendern(Person person) throws PersonenServiceException;
     boolean loesche(String id) throws PersonenServiceException;
 

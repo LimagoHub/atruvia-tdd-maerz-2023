@@ -35,9 +35,7 @@ class PersonenServiceImplTest {
     @Mock
     private BlacklistService blacklistMock;
 
-    @Nested
-    @DisplayName("Einfache Validierungstests")
-    class simpleValidation {
+
         @Test
         void speichern_parameterIsNull_throwsPersonenServiceException() throws Exception {
             Person invalid = null;
@@ -72,7 +70,7 @@ class PersonenServiceImplTest {
             PersonenServiceException ex = assertThrows(PersonenServiceException.class, () -> objectUnderTest.speichern(invalid));
             assertEquals("Nachname zu kurz", ex.getMessage());
         }
-    }
+
 
 
     @Test
@@ -112,6 +110,58 @@ class PersonenServiceImplTest {
         inOrder.verify(blacklistMock).isBlacklisted(validPerson);
         inOrder.verify(mapperMock).convert(validPerson);
         inOrder.verify(repoMock).save(entity);
+
+    }
+
+
+    @Test
+    void speichern_overloaded() throws Exception{
+        // Arrange
+        PersonEntity entity = PersonEntity.builder().id("4711").vorname("Fritz").nachname("Schmitt").build();
+        Person validPerson = Person.builder().id("1").vorname("John").nachname("Doe").build();
+        when(mapperMock.convert((Person) any())).thenAnswer(invocationOnMock -> {
+            Person p = invocationOnMock.getArgument(0);
+            assertEquals("John", p.getVorname());
+            assertEquals("Doe", p.getNachname());
+            assertNotNull(p.getId());
+
+            return entity;
+        });
+
+        doAnswer(invocationOnMock -> {
+            Person p = invocationOnMock.getArgument(0);
+            return null;
+        }).when(repoMock).save(any());
+
+
+        when(blacklistMock.isBlacklisted(any())).thenReturn(false);
+        //Act
+        objectUnderTest.speichern("John","Doe");
+        // Assertion
+
+        InOrder inOrder = inOrder(blacklistMock, mapperMock,repoMock);
+        inOrder.verify(blacklistMock).isBlacklisted(any());
+        inOrder.verify(mapperMock).convert((Person)any());
+        inOrder.verify(repoMock).save(any());
+    }
+
+    @Test
+    void speichern_overloaded_Nr2() throws Exception{
+
+        // Arrange
+        when(blacklistMock.isBlacklisted(any())).thenReturn(false);
+        when(mapperMock.convert(any(Person.class))).thenAnswer(invocationOnMock -> {
+            Person capturedPerson = invocationOnMock.getArgument(0);
+            assertNotNull(capturedPerson.getId());
+            assertEquals(36, capturedPerson.getId().length());
+            assertEquals("John", capturedPerson.getVorname());
+            assertEquals("Doe", capturedPerson.getNachname());
+            return PersonEntity.builder().build();
+        });
+        //Act
+        objectUnderTest.speichern("John","Doe");
+        // Assertion
+        // siehe oben
 
     }
 }

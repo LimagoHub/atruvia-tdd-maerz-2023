@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 
 @Service
@@ -46,8 +47,15 @@ public class PersonenServiceImpl implements PersonenService {
         }
     }
 
+    @Override
+    public void speichern(String vorname, String nachname) throws PersonenServiceException {
+        Person p = Person.builder().vorname(vorname).nachname(nachname).build();
+        speichern(p);
+    }
+
     private void speichernImpl(Person person) throws PersonenServiceException {
         checkPerson(person);
+        person.setId(UUID.randomUUID().toString());
         repo.save(mapper.convert(person));
     }
 

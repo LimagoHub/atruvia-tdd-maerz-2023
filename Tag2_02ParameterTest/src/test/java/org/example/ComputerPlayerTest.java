@@ -24,6 +24,11 @@ class ComputerPlayerTest {
     @InjectMocks
     private ComputerPlayer objectUnderTest;
 
+    @ParameterizedTest
+    @CsvSource({"20,3","21,1","22,1","23,2"})
+    void doTurn_StonesMod4Gleich0_returns3(int stones, int turn) {
+        assertEquals(turn, objectUnderTest.doTurn(stones));
+    }
 
 
 }
