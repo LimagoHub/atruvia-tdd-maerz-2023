@@ -1,5 +1,7 @@
 package de.atruvia.dependency;
 
+import de.atruvia.service.Event;
+
 public class DependencyImpl implements Dependency {
 
     @Override
@@ -7,25 +9,21 @@ public class DependencyImpl implements Dependency {
         System.out.println(message);
     }
 
-//    public void foo(String message) {
-//
-//    }
+
 
     @Override
     public int bar() {
         return 42;
     }
 
-//    public int bar() {
-//        return 0;
-//    }
+
 
     @Override
     public int foobar(String message) {
         return message.length();
     }
 
-//    public int foobar(String message) {
-//        return 0;
-//    }
+    public void send(Event event) {
+        System.out.println(event);
+    }
 }

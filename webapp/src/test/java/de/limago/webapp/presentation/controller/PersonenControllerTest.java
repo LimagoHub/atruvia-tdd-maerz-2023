@@ -9,6 +9,8 @@ import org.hamcrest.Matcher;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -35,14 +37,14 @@ import static org.mockito.Mockito.*;
 @ActiveProfiles("test")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ExtendWith(SpringExtension.class)
-@Sql({"/create.sql", "/insert.sql"})
+//@Sql({"/create.sql", "/insert.sql"})
 class PersonenControllerTest {
 
     @Autowired
-    private TestRestTemplate restTemplate;
+    private TestRestTemplate restTemplate;// Nur lokale Pfade
 
-    @MockBean
-    private PersonenService serviceMock;
+    @MockBean // Spring Annotation
+    private PersonenService serviceMock; // Macht einen UnitTest
 
 //    @MockBean
 //    private PersonenRepository repoMock;
@@ -52,8 +54,13 @@ class PersonenControllerTest {
     private final Person validPerson = Person.builder().id(validUUID).vorname("John").nachname("Doe").build();
     @Test
     void findById_test1() throws Exception{
+        // Arrange
         when(serviceMock.findeNachId(anyString())).thenReturn(Optional.of(validPerson));
+
+        //Action
         PersonDTO dto = restTemplate.getForObject("/v1/personen/b2e24e74-8686-43ea-baff-d9396b4202e0", PersonDTO.class);
+
+        // Assertion
         assertEquals("John", dto.getVorname());
         assertEquals("Doe", dto.getNachname());
     }
@@ -105,29 +112,37 @@ class PersonenControllerTest {
     @Test
     void save_HappyDay() throws Exception{
 
+        // Arrange (Paket zum Versenden schnueren)
         PersonDTO dtoToSend =PersonDTO.builder().id(validUUID).vorname("John").nachname("Doe").build();
 
         HttpEntity<PersonDTO> httpEntity = new HttpEntity<>(dtoToSend);
 
+        // Act (Restcall mit Post-Method)
         ResponseEntity<Void> entity = restTemplate.exchange("/v1/personen", HttpMethod.POST, httpEntity,Void.class);
 
+        // Assert (Prüfen ob der richtige StatusCode, LocationHeader etc. zurück kommen)
         assertEquals(HttpStatus.CREATED, entity.getStatusCode());
         assertThat(entity.getHeaders().getLocation().toString(), Matchers.endsWith("/v1/personen/b2e24e74-8686-43ea-baff-d9396b4202e0"));
+
+        // Pruefen ob der richtige Wert an den Service uebergeben wird
         verify(serviceMock).speichern(validPerson);
     }
 
     @Test
     void save_Antipath() throws Exception{
 
-
+        // Arrange
         doThrow(new PersonenServiceException("Unerwuenschte Person")).when(serviceMock).speichern(any());
 
         PersonDTO dtoToSend =PersonDTO.builder().id(validUUID).vorname("John").nachname("Doe").build();
 
         HttpEntity<PersonDTO> httpEntity = new HttpEntity<>(dtoToSend);
 
+        // Act
         ResponseEntity<Map<String, Object>> entity = restTemplate.exchange("/v1/personen", HttpMethod.POST, httpEntity,new ParameterizedTypeReference<Map<String, Object>>() { });
 
+
+        // Assert
         assertEquals(HttpStatus.BAD_REQUEST, entity.getStatusCode());
         var result = entity.getBody();
         assertEquals("Unerwuenschte Person", result.get("message"));
@@ -149,6 +164,18 @@ class PersonenControllerTest {
         var result = entity.getBody();
         assertEquals("Interner Fehler", result.get("message"));
 
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "true,         200",
+            "false,        404"
+    })
+    void delete_als_parameter(boolean serviceresult, int expectedStatusCode) throws Exception{
+        when(serviceMock.loesche(anyString())).thenReturn(serviceresult);
+        ResponseEntity<Void> entity = restTemplate.exchange("/v1/personen/1", HttpMethod.DELETE, null, Void.class);
+        assertEquals(expectedStatusCode,entity.getStatusCodeValue());
+        verify(serviceMock).loesche("1");
     }
 
 }

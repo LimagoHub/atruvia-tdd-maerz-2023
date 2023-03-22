@@ -1,4 +1,4 @@
-package de.goodyear;
+package de.atruvia;
 
 /**
  * Hello world!

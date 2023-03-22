@@ -3,6 +3,9 @@ package de.atruvia.service;
 import de.atruvia.dependency.Dependency;
 import lombok.RequiredArgsConstructor;
 
+import java.time.LocalDateTime;
+import java.util.UUID;
+
 @RequiredArgsConstructor
 public class MyServiceUsingDependencyImpl {
 
@@ -21,5 +24,10 @@ public class MyServiceUsingDependencyImpl {
 
     public int cde(String message) {
         return dependency.foobar(message.toUpperCase()) * 100;
+    }
+
+    public void fireEvent(String message) {
+        Event event = new Event(UUID.randomUUID().toString(), LocalDateTime.now(), message);
+        dependency.send(event);
     }
 }

@@ -40,7 +40,7 @@ public class ErrorHandlerAdvice extends ResponseEntityExceptionHandler {
         return ResponseEntity.badRequest().body(body);
     }
     @ExceptionHandler(PersonenServiceException.class)
-    public ResponseEntity<Object> handlePersonenServiceException(final PersonenServiceException ex, final WebRequest request) {
+    public ResponseEntity<Map<String, Object>> handlePersonenServiceException(final PersonenServiceException ex, final WebRequest request) {
         final Map<String, Object> body = new HashMap<>();
 
         body.put("timestamp", LocalDateTime.now());
