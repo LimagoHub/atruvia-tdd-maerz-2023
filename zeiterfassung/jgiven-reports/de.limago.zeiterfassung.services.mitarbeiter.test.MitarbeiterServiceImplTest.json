@@ -1,0 +1,2167 @@
+{
+  "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+  "name": "Mitarbeiter Service Impl",
+  "scenarios": [
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_update_Mitarbeiter_and_Ende_Arbeitsverhältnis_is_null",
+      "description": "Scenario update Mitarbeiter and Ende Arbeitsverhältnis is null",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "mitarbeiter with Ende Arbeitsverhältnis",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter with Ende Arbeitsverhältnis"
+                },
+                {
+                  "value": "null",
+                  "argumentInfo": {
+                    "argumentName": "localDate",
+                    "formattedValue": "\"null\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 43420300
+            },
+            {
+              "name": "aendere bestehenden Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "aendere bestehenden Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 203513300
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 74394900
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Ende Arbeitsverhältnis darf nicht null sein.",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Ende Arbeitsverhältnis darf nicht null sein.\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1895900
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 618885200
+        }
+      ],
+      "durationInNanos": 618885200,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_save_Mitarbeiter_and_Fullname_is_to_long",
+      "description": "Scenario save Mitarbeiter and Fullname is to long",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "mitarbeiter with fullname",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter with fullname"
+                },
+                {
+                  "value": "01234567890123456789012345678901234567890123456789X",
+                  "argumentInfo": {
+                    "argumentName": "fullname",
+                    "formattedValue": "\"01234567890123456789012345678901234567890123456789X\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1158500
+            },
+            {
+              "name": "erfasse neuen Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "erfasse neuen Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 28293800
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 20900
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "muss zwischen 2 und 50 liegen",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"muss zwischen 2 und 50 liegen\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 916700
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 54497500
+        }
+      ],
+      "durationInNanos": 54497500,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_save_Mitarbeiter_and_Fullname_is_to_short",
+      "description": "Scenario save Mitarbeiter and Fullname is to short",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "mitarbeiter with fullname",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter with fullname"
+                },
+                {
+                  "value": "p",
+                  "argumentInfo": {
+                    "argumentName": "fullname",
+                    "formattedValue": "\"p\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1015500
+            },
+            {
+              "name": "erfasse neuen Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "erfasse neuen Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1731400
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 28300
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "muss zwischen 2 und 50 liegen",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"muss zwischen 2 und 50 liegen\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 854700
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 26260800
+        }
+      ],
+      "durationInNanos": 26260800,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_update_Mitarbeiter_mit_Rolle_Monteur_and_missing_ZeitModell",
+      "description": "Scenario update Mitarbeiter mit Rolle Monteur and missing ZeitModell",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "mitarbeiter mit Rolle $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter mit Rolle"
+                },
+                {
+                  "value": "MONTEUR",
+                  "argumentInfo": {
+                    "argumentName": "rolle",
+                    "formattedValue": "\"MONTEUR\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 32900
+            },
+            {
+              "name": "mitarbeiter mit missing ZeitModell",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter mit missing ZeitModell"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 172400
+            },
+            {
+              "name": "aendere bestehenden Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "aendere bestehenden Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1618200
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 32531200
+        }
+      ],
+      "durationInNanos": 32531200,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_save_Mitarbeiter_isNull",
+      "description": "Scenario save Mitarbeiter isNull",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "mitarbeiter is null",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter is null"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 138700
+            },
+            {
+              "name": "erfasse neuen Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "erfasse neuen Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1337600
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 23900
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Nullwert ist nicht erlaubt",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Nullwert ist nicht erlaubt\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1247400
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 58426300
+        }
+      ],
+      "durationInNanos": 58426300,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_update_Mitarbeiter_and_Fullname_is_to_long",
+      "description": "Scenario update Mitarbeiter and Fullname is to long",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "mitarbeiter with fullname",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter with fullname"
+                },
+                {
+                  "value": "01234567890123456789012345678901234567890123456789X",
+                  "argumentInfo": {
+                    "argumentName": "fullname",
+                    "formattedValue": "\"01234567890123456789012345678901234567890123456789X\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1109400
+            },
+            {
+              "name": "aendere bestehenden Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "aendere bestehenden Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 2770300
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 39500
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "muss zwischen 2 und 50 liegen",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"muss zwischen 2 und 50 liegen\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1087700
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 25405100
+        }
+      ],
+      "durationInNanos": 25405100,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_update_Mitarbeiter_and_Beginn_Arbeitsverhältnis_is_null",
+      "description": "Scenario update Mitarbeiter and Beginn Arbeitsverhältnis is null",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "mitarbeiter with Beginn Arbeitsverhältnis",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter with Beginn Arbeitsverhältnis"
+                },
+                {
+                  "value": "null",
+                  "argumentInfo": {
+                    "argumentName": "localDate",
+                    "formattedValue": "\"null\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1089900
+            },
+            {
+              "name": "aendere bestehenden Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "aendere bestehenden Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1198100
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 23400
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Beginn Arbeitsverhältnis darf nicht null sein.",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Beginn Arbeitsverhältnis darf nicht null sein.\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1839900
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 24334900
+        }
+      ],
+      "durationInNanos": 24334900,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_update_Mitarbeiter_and_Ende_Arbeitsverhältnis_is_after_Beginn_Arbeitsverhältnis",
+      "description": "Scenario update Mitarbeiter and Ende Arbeitsverhältnis is after Beginn Arbeitsverhältnis",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "mitarbeiter with Ende Arbeitsverhältnis",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter with Ende Arbeitsverhältnis"
+                },
+                {
+                  "value": "2019-05-21",
+                  "argumentInfo": {
+                    "argumentName": "localDate",
+                    "formattedValue": "\"2019-05-21\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 33100
+            },
+            {
+              "name": "Beginn Arbeitsverhältnis",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "Beginn Arbeitsverhältnis"
+                },
+                {
+                  "value": "2020-05-21",
+                  "argumentInfo": {
+                    "argumentName": "localDate",
+                    "formattedValue": "2020-05-21"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1523100
+            },
+            {
+              "name": "aendere bestehenden Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "aendere bestehenden Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1698400
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 23500
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Ende Arbeitsverhältnis liegt vor Beginn Arbeitsverhältnis",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Ende Arbeitsverhältnis liegt vor Beginn Arbeitsverhältnis\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 926500
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 28456000
+        }
+      ],
+      "durationInNanos": 28456000,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_save_Mitarbeiter_mit_Rolle_Monteur_and_missing_ZeitModell",
+      "description": "Scenario save Mitarbeiter mit Rolle Monteur and missing ZeitModell",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "mitarbeiter mit Rolle $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter mit Rolle"
+                },
+                {
+                  "value": "MONTEUR",
+                  "argumentInfo": {
+                    "argumentName": "rolle",
+                    "formattedValue": "\"MONTEUR\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 29500
+            },
+            {
+              "name": "mitarbeiter mit missing ZeitModell",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter mit missing ZeitModell"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 212100
+            },
+            {
+              "name": "erfasse neuen Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "erfasse neuen Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 2236700
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 30800
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Monteur benötigt Zeitmodell",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Monteur benötigt Zeitmodell\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1779200
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 31019300
+        }
+      ],
+      "durationInNanos": 31019300,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_save_Mitarbeiter_and_Ende_Arbeitsverhältnis_is_null",
+      "description": "Scenario save Mitarbeiter and Ende Arbeitsverhältnis is null",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "mitarbeiter with Ende Arbeitsverhältnis",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter with Ende Arbeitsverhältnis"
+                },
+                {
+                  "value": "null",
+                  "argumentInfo": {
+                    "argumentName": "localDate",
+                    "formattedValue": "\"null\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1113500
+            },
+            {
+              "name": "erfasse neuen Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "erfasse neuen Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1311800
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 119800
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Ende Arbeitsverhältnis darf nicht null sein.",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Ende Arbeitsverhältnis darf nicht null sein.\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 4673900
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 31952800
+        }
+      ],
+      "durationInNanos": 31952800,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_update_Mitarbeiter_successfully_saved_in_database_with_hashed_password",
+      "description": "Scenario update Mitarbeiter successfully saved in database with hashed password",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "new mitarbeiter with username",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "new mitarbeiter with username"
+                },
+                {
+                  "value": "peterhinz",
+                  "argumentInfo": {
+                    "argumentName": "username",
+                    "formattedValue": "\"peterhinz\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 872600
+            },
+            {
+              "name": "aendere bestehenden Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "aendere bestehenden Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 267457900
+            },
+            {
+              "name": "Mitarbeiter is succesfully saved in db",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "Mitarbeiter is succesfully saved in db"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 2247700
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 314858700
+        }
+      ],
+      "durationInNanos": 314858700,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_update_Mitarbeiter_and_Fullname_is_to_short",
+      "description": "Scenario update Mitarbeiter and Fullname is to short",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "mitarbeiter with fullname",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter with fullname"
+                },
+                {
+                  "value": "p",
+                  "argumentInfo": {
+                    "argumentName": "fullname",
+                    "formattedValue": "\"p\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 969000
+            },
+            {
+              "name": "aendere bestehenden Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "aendere bestehenden Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 2238300
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 29900
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "muss zwischen 2 und 50 liegen",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"muss zwischen 2 und 50 liegen\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1134300
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 27307000
+        }
+      ],
+      "durationInNanos": 27307000,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_save_Mitarbeiter_and_Password_is_not_valid",
+      "description": "Scenario save Mitarbeiter and Password is not valid",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "mitarbeiter with password",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter with password"
+                },
+                {
+                  "value": "geheim",
+                  "argumentInfo": {
+                    "argumentName": "password",
+                    "formattedValue": "\"geheim\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 951300
+            },
+            {
+              "name": "erfasse neuen Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "erfasse neuen Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 2301200
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 37300
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Password braucht min. 6 Stellen, muss min. einen Gross- und einen Kleinbuchstaben, sowie eine Ziffer und eines dieser Zeichen \u0027@#$%\u0027 enthalten.",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Password braucht min. 6 Stellen, muss min. einen Gross- und einen Kleinbuchstaben, sowie eine Ziffer und eines dieser Zeichen \u0027@#$%\u0027 enthalten.\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 751100
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 23629200
+        }
+      ],
+      "durationInNanos": 23629200,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_update_Mitarbeiter_and_Password_is_null",
+      "description": "Scenario update Mitarbeiter and Password is null",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "mitarbeiter with password",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter with password"
+                },
+                {
+                  "value": "null",
+                  "argumentInfo": {
+                    "argumentName": "password",
+                    "formattedValue": "\"null\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1663100
+            },
+            {
+              "name": "aendere bestehenden Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "aendere bestehenden Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1655800
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 18200
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Password darf nicht leer sein.",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Password darf nicht leer sein.\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 911300
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 19016300
+        }
+      ],
+      "durationInNanos": 19016300,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_save_Mitarbeiter_and_Username_is_toShort",
+      "description": "Scenario save Mitarbeiter and Username is toShort",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "new mitarbeiter with username",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "new mitarbeiter with username"
+                },
+                {
+                  "value": "Peter",
+                  "argumentInfo": {
+                    "argumentName": "username",
+                    "formattedValue": "\"Peter\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 976500
+            },
+            {
+              "name": "erfasse neuen Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "erfasse neuen Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1803800
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 27600
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "username braucht min. 6 Stellen, nur Buchstaben und Ziffern sind erlaubt.",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"username braucht min. 6 Stellen, nur Buchstaben und Ziffern sind erlaubt.\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1381400
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 20655900
+        }
+      ],
+      "durationInNanos": 20655900,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_update_Mitarbeiter_and_mitarbeiter_do_not_exists",
+      "description": "Scenario update Mitarbeiter and mitarbeiter do not exists",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "new mitarbeiter with username",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "new mitarbeiter with username"
+                },
+                {
+                  "value": "fritzmayer",
+                  "argumentInfo": {
+                    "argumentName": "username",
+                    "formattedValue": "\"fritzmayer\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 41000
+            },
+            {
+              "name": "mitarbeiter not exists",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter not exists"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 172700
+            },
+            {
+              "name": "aendere bestehenden Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "aendere bestehenden Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 2957000
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 36800
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "user nicht vorhanden",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"user nicht vorhanden\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1502700
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 25361400
+        }
+      ],
+      "durationInNanos": 25361400,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_save_Mitarbeiter_and_Beginn_Arbeitsverhältnis_is_null",
+      "description": "Scenario save Mitarbeiter and Beginn Arbeitsverhältnis is null",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "mitarbeiter with Beginn Arbeitsverhältnis",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter with Beginn Arbeitsverhältnis"
+                },
+                {
+                  "value": "null",
+                  "argumentInfo": {
+                    "argumentName": "localDate",
+                    "formattedValue": "\"null\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1596100
+            },
+            {
+              "name": "erfasse neuen Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "erfasse neuen Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 4524400
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 110500
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Beginn Arbeitsverhältnis darf nicht null sein.",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Beginn Arbeitsverhältnis darf nicht null sein.\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1896000
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 40968600
+        }
+      ],
+      "durationInNanos": 40968600,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_save_Mitarbeiter_successfully_saved_in_database_with_hashed_password",
+      "description": "Scenario save Mitarbeiter successfully saved in database with hashed password",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "new mitarbeiter with username",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "new mitarbeiter with username"
+                },
+                {
+                  "value": "karlheinz",
+                  "argumentInfo": {
+                    "argumentName": "username",
+                    "formattedValue": "\"karlheinz\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1901800
+            },
+            {
+              "name": "erfasse neuen Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "erfasse neuen Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 204061800
+            },
+            {
+              "name": "Mitarbeiter is succesfully saved in db",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "Mitarbeiter is succesfully saved in db"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 28900
+            },
+            {
+              "name": "his password in db is hashed",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "his password in db is hashed"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 122417600
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 353435300
+        }
+      ],
+      "durationInNanos": 353435300,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_save_Mitarbeiter_and_mitarbeiter_exists",
+      "description": "Scenario save Mitarbeiter and mitarbeiter exists",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "new mitarbeiter with username",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "new mitarbeiter with username"
+                },
+                {
+                  "value": "peterhinz",
+                  "argumentInfo": {
+                    "argumentName": "username",
+                    "formattedValue": "\"peterhinz\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 38000
+            },
+            {
+              "name": "mitarbeiter exists",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter exists"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 107700
+            },
+            {
+              "name": "erfasse neuen Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "erfasse neuen Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 2327400
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 20800
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "username bereits vorhanden",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"username bereits vorhanden\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 884600
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 20264100
+        }
+      ],
+      "durationInNanos": 20264100,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_update_Mitarbeiter_and_Username_is_toShort",
+      "description": "Scenario update Mitarbeiter and Username is toShort",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "new mitarbeiter with username",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "new mitarbeiter with username"
+                },
+                {
+                  "value": "Peter",
+                  "argumentInfo": {
+                    "argumentName": "username",
+                    "formattedValue": "\"Peter\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1620400
+            },
+            {
+              "name": "aendere bestehenden Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "aendere bestehenden Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 2086200
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 38100
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "username braucht min. 6 Stellen, nur Buchstaben und Ziffern sind erlaubt.",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"username braucht min. 6 Stellen, nur Buchstaben und Ziffern sind erlaubt.\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1135000
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 29181900
+        }
+      ],
+      "durationInNanos": 29181900,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_save_Mitarbeiter_and_Password_is_null",
+      "description": "Scenario save Mitarbeiter and Password is null",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "mitarbeiter with password",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter with password"
+                },
+                {
+                  "value": "null",
+                  "argumentInfo": {
+                    "argumentName": "password",
+                    "formattedValue": "\"null\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 940800
+            },
+            {
+              "name": "erfasse neuen Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "erfasse neuen Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1366800
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 30100
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Password darf nicht leer sein.",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Password darf nicht leer sein.\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 744700
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 19378100
+        }
+      ],
+      "durationInNanos": 19378100,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_save_Mitarbeiter_and_Ende_Arbeitsverhältnis_is_after_Beginn_Arbeitsverhältnis",
+      "description": "Scenario save Mitarbeiter and Ende Arbeitsverhältnis is after Beginn Arbeitsverhältnis",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "mitarbeiter with Ende Arbeitsverhältnis",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter with Ende Arbeitsverhältnis"
+                },
+                {
+                  "value": "2019-05-21",
+                  "argumentInfo": {
+                    "argumentName": "localDate",
+                    "formattedValue": "\"2019-05-21\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 35400
+            },
+            {
+              "name": "Beginn Arbeitsverhältnis",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "Beginn Arbeitsverhältnis"
+                },
+                {
+                  "value": "2020-05-21",
+                  "argumentInfo": {
+                    "argumentName": "localDate",
+                    "formattedValue": "2020-05-21"
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 712800
+            },
+            {
+              "name": "erfasse neuen Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "erfasse neuen Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1774100
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 16700
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Ende Arbeitsverhältnis liegt vor Beginn Arbeitsverhältnis",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Ende Arbeitsverhältnis liegt vor Beginn Arbeitsverhältnis\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 748200
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 21377900
+        }
+      ],
+      "durationInNanos": 21377900,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.mitarbeiter.test.MitarbeiterServiceImplTest",
+      "testMethodName": "Scenario_update_Mitarbeiter_isNull",
+      "description": "Scenario update Mitarbeiter isNull",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "mitarbeiter is null",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "mitarbeiter is null"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 153500
+            },
+            {
+              "name": "aendere bestehenden Mitarbeiter",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "aendere bestehenden Mitarbeiter"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 988700
+            },
+            {
+              "name": "expected MitarbeiterServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected MitarbeiterServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 22500
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Nullwert ist nicht erlaubt",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Nullwert ist nicht erlaubt\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 808200
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 18204700
+        }
+      ],
+      "durationInNanos": 18204700,
+      "executionStatus": "SUCCESS"
+    }
+  ],
+  "tagMap": {}
+}

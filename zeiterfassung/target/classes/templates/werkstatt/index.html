@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--/* Title of this template will be passed to the head fragment along with custom links and scripts */-->
+<head
+	th:replace="werkstatt/layout :: head(~{this :: title}, ~{this :: .custom-link}, ~{this :: .custom-script})">
+<title>Werkstatt List</title>
+<!-- Custom links for this page only -->
+<link class="custom-link" href="/css/task/task.css"
+	th:href="@{/css/task/task.css}" />
+
+<!-- Custom scripts for this page only -->
+<script class="custom-script" src="/js/task/task.js"
+	th:src="@{/js/task/task.js}"></script>
+</head>
+<body>
+
+	<!-- Grey with black text -->
+	<div>
+		<nav
+			class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
+			<a class="navbar-brand" href="#"> <img src="/images/limago.png"
+				alt="Logo" style="width: 40px;">
+			</a>
+			<!-- Toggler/collapsibe Button -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="/public/login">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="/zeiterfassung">Zeiterfassung</a></li>
+					<li class="nav-item  active"><a class="nav-link" href="/werkstatt">Werkstatt</a></li>
+					<li class="nav-item"><a class="nav-link" href="mitarbeiter">Mitarbeiter</a></li>
+					<li class="nav-item"><a class="nav-link" href="/auswertung">Auswertung</a></li>
+					<li class="nav-item"><a class="nav-link" href="/zeitmodell">Zeitmodell</a></li>
+					<li class="nav-item"><a class="nav-link" href="/public/impressum">Impressum</a></li>
+					
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li>
+						<form class="form-inline" action="/auth/logout">
+							<button type="submit" class="btn btn-default btn-sm">
+								<span class="glyphicon glyphicon-log-out"></span> Log out
+							</button>
+						</form>
+					<li>
+				</ul>
+
+
+
+			</div>
+		</nav>
+		<ul class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Home</a></li>
+			<li class="breadcrumb-item active" aria-current="page"><a
+				href="#">Werkstatt</a></li>
+
+		</ul>
+	</div>
+
+
+
+	<!--/* Insert content fragment with content of the element with id = 'task-list' */-->
+	<div
+		th:insert="werkstatt/layout :: content(~{ :: #werkstatt-list})">
+		<div id="werkstatt-list">
+			Werkstatt Index			
+		</div>
+	</div>
+
+	<footer th:replace="werkstatt/layout :: footer">Footer</footer>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: de.limago.zeiterfassung.services.feiertage.test.FeiertagServiceImplTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.662 s - in de.limago.zeiterfassung.services.feiertage.test.FeiertagServiceImplTest

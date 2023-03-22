@@ -1,0 +1,13 @@
+de\limago\zeiterfassung\services\feiertage\test\stages\ThenFeiertagOutcome.class
+de\limago\zeiterfassung\services\feiertage\test\stages\GivenFeiertagState.class
+de\limago\zeiterfassung\services\zeitmodelle\test\stages\ThenZeitmodellOutcome.class
+de\limago\zeiterfassung\services\feiertage\test\stages\WhenFeiertagAction.class
+de\limago\zeiterfassung\services\mitarbeiter\test\stages\WhenMitarbeiterAction.class
+de\limago\zeiterfassung\services\zeitmodelle\test\stages\WhenZeitmodellAction.class
+de\limago\zeiterfassung\ZeiterfassungApplicationTests.class
+de\limago\zeiterfassung\services\zeitmodelle\test\ZeitmodellServiceImplTest.class
+de\limago\zeiterfassung\services\mitarbeiter\test\stages\GivenMitarbeiterState.class
+de\limago\zeiterfassung\services\mitarbeiter\test\MitarbeiterServiceImplTest.class
+de\limago\zeiterfassung\services\mitarbeiter\test\stages\ThenMitarbeiterOutcome.class
+de\limago\zeiterfassung\services\feiertage\test\FeiertagServiceImplTest.class
+de\limago\zeiterfassung\services\zeitmodelle\test\stages\GivenZeitmodellState.class

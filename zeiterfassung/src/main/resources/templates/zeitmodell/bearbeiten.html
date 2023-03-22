@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--/* Title of this template will be passed to the head fragment along with custom links and scripts */-->
+<head th:replace="zeitmodell/layout :: head(~{this :: title}, ~{this :: .custom-link}, ~{this :: .custom-script})">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>zeitmodell List</title>
+<!-- Custom links for this page only -->
+<link class="custom-link" href="/css/task/task.css" th:href="@{/css/task/task.css}" />
+
+<!-- Custom scripts for this page only -->
+<script class="custom-script" src="/js/task/task.js" th:src="@{/js/zeitmodell/zeitmodell.js}"></script>
+
+</head>
+<body>
+
+	<!-- Grey with black text -->
+	<div>
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
+			<a class="navbar-brand" href="#"> <img src="/images/limago.png" alt="Logo" style="width: 40px;">
+			</a>
+			<!-- Toggler/collapsibe Button -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="/public/login">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="/zeiterfassung">Zeiterfassung</a></li>
+					<li class="nav-item"><a class="nav-link" href="/werkstatt">Werkstatt</a></li>
+					<li class="nav-item"><a class="nav-link" href="mitarbeiter">Mitarbeiter</a></li>
+					<li class="nav-item"><a class="nav-link" href="/auswertung">Auswertung</a></li>
+					<li class="nav-item  active"><a class="nav-link" href="/zeitmodell">Zeitmodell</a></li>
+					<li class="nav-item"><a class="nav-link" href="/public/impressum">Impressum</a></li>
+
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li>
+						<form class="form-inline" action="/auth/logout">
+							<button type="submit" class="btn btn-default btn-sm">
+								<span class="glyphicon glyphicon-log-out"></span> Log out
+							</button>
+						</form>
+					<li>
+				</ul>
+
+
+
+			</div>
+		</nav>
+		<ul class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Home</a></li>
+			<li class="breadcrumb-item active" aria-current="page"><a href="#">Zeitmodell</a></li>
+
+		</ul>
+	</div>
+
+
+
+
+	<!--/* Insert content fragment with content of the element with id = 'task-list' */-->
+	<div th:insert="zeitmodell/layout :: content(~{ :: #zeitmodell-list})">
+		<div id="zeitmodell-list" th:object="${messages}">
+			<div class="container" th:if="${messages.visible}">
+				<br />
+				<div class="alert" th:classappend="${messages.alertAttribute}">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a> <span th:text="${messages.message}">Upps</span>
+				</div>
+			</div>
+
+
+
+			<form action="#" th:action="@{/zeitmodell/save}" th:object="${zeitmodell}" method="post">
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label col-form-label-sm" for="ID">ID:</label>
+
+					<div class="col-sm-10">
+						<input type="text" th:field="*{id}" class="form-control form-control-sm" id="is" readonly />
+					</div>
+
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label col-form-label-sm" for="bezeichnung">Bezeichnung:</label>
+
+					<div class="col-sm-10">
+						<input type="text" th:field="*{bezeichnung}" class="form-control form-control-sm" id="bezeichnung" placeholder="Bezeichnung eingeben" />
+					</div>
+					<div class="text-danger col-sm-10" th:if="${#fields.hasErrors('bezeichnung')}" th:errors="*{bezeichnung}">Please fill out this field.</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label col-form-label-sm" for="montag">Arbeitszeit Montag:</label>
+
+					<div class="col-sm-10">
+						<input type="text" th:field="*{montag}" class="form-control form-control-sm" id="montag" placeholder="Arbeitszeit für diesen Tag eingeben" />
+					</div>
+					<div class="text-danger col-sm-10" th:if="${#fields.hasErrors('montag')}" th:errors="*{montag}">Please fill out this field.</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label col-form-label-sm" for="dienstag">Arbeitszeit Dienstag:</label>
+
+					<div class="col-sm-10">
+						<input type="text" th:field="*{dienstag}" class="form-control form-control-sm" id="dienstag" placeholder="Arbeitszeit für diesen Tag eingeben" />
+					</div>
+					<div class="text-danger col-sm-10" th:if="${#fields.hasErrors('dienstag')}" th:errors="*{dienstag}">Please fill out this field.</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label col-form-label-sm" for="mittwoch">Arbeitszeit Mittwoch:</label>
+
+					<div class="col-sm-10">
+						<input type="text" th:field="*{mittwoch}" class="form-control form-control-sm" id="mittwoch" placeholder="Arbeitszeit für diesen Tag eingeben" />
+					</div>
+					<div class="text-danger col-sm-10" th:if="${#fields.hasErrors('mittwoch')}" th:errors="*{mittwoch}">Please fill out this field.</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label col-form-label-sm" for="donnerstag">Arbeitszeit Donnerstag:</label>
+
+					<div class="col-sm-10">
+						<input type="text" th:field="*{donnerstag}" class="form-control form-control-sm" id="donnerstag" placeholder="Arbeitszeit für diesen Tag eingeben" />
+					</div>
+					<div class="text-danger col-sm-10" th:if="${#fields.hasErrors('donnerstag')}" th:errors="*{donnerstag}">Please fill out this field.</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label col-form-label-sm" for="freitag">Arbeitszeit Freitag:</label>
+
+					<div class="col-sm-10">
+						<input type="text" th:field="*{freitag}" class="form-control form-control-sm" id="freitag" placeholder="Arbeitszeit für diesen Tag eingeben" />
+					</div>
+					<div class="text-danger col-sm-10" th:if="${#fields.hasErrors('freitag')}" th:errors="*{freitag}">Please fill out this field.</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label col-form-label-sm" for="samstag">Arbeitszeit Samstag:</label>
+
+					<div class="col-sm-10">
+						<input type="text" th:field="*{samstag}" class="form-control form-control-sm" id="samstag" placeholder="Arbeitszeit für diesen Tag eingeben" />
+					</div>
+					<div class="text-danger col-sm-10" th:if="${#fields.hasErrors('samstag')}" th:errors="*{samstag}">Please fill out this field.</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label col-form-label-sm" for="sonntag">Arbeitszeit Sonntag:</label>
+
+					<div class="col-sm-10">
+						<input type="text" th:field="*{sonntag}" class="form-control form-control-sm" id="sonntag" placeholder="Arbeitszeit für diesen Tag eingeben" />
+					</div>
+					<div class="text-danger col-sm-10" th:if="${#fields.hasErrors('sonntag')}" th:errors="*{sonntag}">Please fill out this field.</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-sm-2 col-form-label col-form-label-sm" for="lastUpdate">Letze Änderung:</label>
+
+					<div class="col-sm-10">
+						<input type="text" th:field="*{lastUpdate}" class="form-control form-control-sm" id="lastUpdate" readonly />
+					</div>
+
+				</div>
+
+				
+
+				<button class="btn btn-primary" type="submit">User speichern</button>
+				<a class='btn btn-default btn-secondary' href="/user/"> Zurück zur Übersicht </a>
+			</form>
+
+
+
+
+		</div>
+
+	</div>
+
+	<!-- ###################  Modales Fenster  Ende ################################ -->
+
+	<footer th:replace="zeitmodell/layout :: footer">Footer</footer>
+
+
+
+
+</body>
+</html>

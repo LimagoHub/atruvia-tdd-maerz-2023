@@ -1,0 +1,56 @@
+-------------------------------------------------------------------------------
+Test set: de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 0, Errors: 13, Skipped: 0, Time elapsed: 0.25 s <<< FAILURE! - in de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest
+scenario_find_zeitmodell_mit_primaerschluessel(de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest)  Time elapsed: 0.049 s  <<< ERROR!
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql]; nested exception is java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+Caused by: java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+
+Scenario_save_Zeitmodell_ID_isNull(de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest)  Time elapsed: 0.014 s  <<< ERROR!
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql]; nested exception is java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+Caused by: java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+
+scenario_delete_zeitmodell_should_succeed_if_not_active(de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest)  Time elapsed: 0.014 s  <<< ERROR!
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql]; nested exception is java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+Caused by: java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+
+scenario_find_mitarbeiter_by_zeitmodell(de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest)  Time elapsed: 0.014 s  <<< ERROR!
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql]; nested exception is java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+Caused by: java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+
+Scenario_save_Zeitmodell_isNull(de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest)  Time elapsed: 0.014 s  <<< ERROR!
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql]; nested exception is java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+Caused by: java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+
+Scenario_save_Zeitmodell_and_Bezeichnung_is_to_long(de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest)  Time elapsed: 0.01 s  <<< ERROR!
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql]; nested exception is java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+Caused by: java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+
+Scenario_save_non_active_Zeitmodell_should_succeed(de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest)  Time elapsed: 0.013 s  <<< ERROR!
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql]; nested exception is java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+Caused by: java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+
+Scenario_save_Zeitmodell_and_id_is_toShort(de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest)  Time elapsed: 0.014 s  <<< ERROR!
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql]; nested exception is java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+Caused by: java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+
+Scenario_save_Zeitmodell_and_id_is_to_long(de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest)  Time elapsed: 0.015 s  <<< ERROR!
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql]; nested exception is java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+Caused by: java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+
+Scenario_save_active_Zeitmodell_should_fail(de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest)  Time elapsed: 0.016 s  <<< ERROR!
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql]; nested exception is java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+Caused by: java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+
+scenario_delete_zeitmodell_should_fail_if_active(de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest)  Time elapsed: 0.018 s  <<< ERROR!
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql]; nested exception is java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+Caused by: java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+
+scenario_find_all_zeitmodelle(de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest)  Time elapsed: 0.016 s  <<< ERROR!
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql]; nested exception is java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+Caused by: java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+
+Scenario_save_Zeitmodell_and_Bezeichnung_is_to_short(de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest)  Time elapsed: 0.014 s  <<< ERROR!
+org.springframework.jdbc.datasource.init.CannotReadScriptException: Cannot read SQL script from class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql]; nested exception is java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+Caused by: java.io.FileNotFoundException: class path resource [de/limago/zeiterfassung/services/zeitmodelle/test/create.sql] cannot be opened because it does not exist
+

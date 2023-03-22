@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--/* Title of this template will be passed to the head fragment along with custom links and scripts */-->
+<head
+	th:replace="mitarbeiter/layout :: head(~{this :: title}, ~{this :: .custom-link}, ~{this :: .custom-script})">
+<title>Mitarbeiter List</title>
+<!-- Custom links for this page only -->
+<link class="custom-link" href="/css/task/task.css"
+	th:href="@{/css/task/task.css}" />
+
+<!-- Custom scripts for this page only -->
+<script class="custom-script" src="/js/task/task.js"
+	th:src="@{/js/task/task.js}"></script>
+</head>
+<body>
+
+	<!-- Grey with black text -->
+	<div>
+		<nav
+			class="navbar navbar-expand-sm bg-dark navbar-dark navbar-fixed-top">
+			<a class="navbar-brand" href="#"> <img src="/images/limago.png"
+				alt="Logo" style="width: 40px;">
+			</a>
+			<!-- Toggler/collapsibe Button -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="/public/login">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="/zeiterfassung">Zeiterfassung</a></li>
+					<li class="nav-item"><a class="nav-link" href="/werkstatt">Werkstatt</a></li>
+					<li class="nav-item active"><a class="nav-link" href="mitarbeiter">Mitarbeiter</a></li>
+					<li class="nav-item"><a class="nav-link" href="/auswertung">Auswertung</a></li>
+					<li class="nav-item"><a class="nav-link" href="/zeitmodell">Zeitmodell</a></li>
+					<li class="nav-item"><a class="nav-link" href="/public/impressum">Impressum</a></li>
+					
+		
+					
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li>
+						<form class="form-inline" action="/auth/logout">
+							<button type="submit" class="btn btn-default btn-sm">
+								<span class="glyphicon glyphicon-log-out"></span> Log out
+							</button>
+						</form>
+					<li>
+				</ul>
+
+
+
+			</div>
+		</nav>
+		<ul class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Home</a></li>
+			<li class="breadcrumb-item active" aria-current="page"><a
+				href="#">Mitarbeiter</a></li>
+
+		</ul>
+	</div>
+
+
+
+	<!--/* Insert content fragment with content of the element with id = 'task-list' */-->
+	<div
+		th:insert="mitarbeiter/layout :: content(~{ :: #mitarbeiter-list})">
+		<div id="mitarbeiter-list">
+			<input class="form-control" id="myInput" type="text" placeholder="suchen..">
+			<br>
+			<table class="table table-bordered table-striped" id="ordertable">
+				<thead>
+					<tr>
+						<th>User</th>
+						<th>Fullname</th>
+						<th>Datum</th>
+						<!--td>Due to</td-->
+					</tr>
+				</thead>
+				<tbody id="myTable">
+					<tr th:if="${mitarbeiter.empty}">
+						<td colspan="4">No tasks</td>
+					</tr>
+					<tr th:each="m : ${mitarbeiter}">
+						<td th:text="${m.username}">1</td>
+						<!--  td>
+                    <a href="#" th:href="@{/task/{id}(id=${task.id})}" th:text="${task.title}">Title ...</a>
+                </td -->
+						<td th:text="${m.fullname}">Text ...</td>
+						<td th:text="${m.beginnArbeitverhaeltnis}">July 11, 2017
+							2:17:16 PM CDT</td>
+						<td>
+							<a th:href="@{/mitarbeiter/bearbeiten/__${m.username}__}"><i class='fas fa-edit'></i></a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<footer th:replace="mitarbeiter/layout :: footer">Footer</footer>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1217 @@
+{
+  "className": "de.limago.zeiterfassung.services.feiertage.test.FeiertagServiceImplTest",
+  "name": "Feiertag Service Impl",
+  "scenarios": [
+    {
+      "className": "de.limago.zeiterfassung.services.feiertage.test.FeiertagServiceImplTest",
+      "testMethodName": "scenario_calculate_mobile_holidays_2018_in_Hessen",
+      "description": "scenario calculate mobile holidays 2018 in Hessen",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "the year $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the year"
+                },
+                {
+                  "value": "2018",
+                  "argumentInfo": {
+                    "argumentName": "jahr",
+                    "formattedValue": "\"2018\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 16911400
+            },
+            {
+              "name": "state is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "state is"
+                },
+                {
+                  "value": "Hessen",
+                  "argumentInfo": {
+                    "argumentName": "name",
+                    "formattedValue": "\"Hessen\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 666300
+            },
+            {
+              "name": "calculate holidays",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate holidays"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 2422300
+            },
+            {
+              "name": "good friday is on $",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "good friday is on"
+                },
+                {
+                  "value": "2018-03-30",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2018-03-30\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 31100
+            },
+            {
+              "name": "easter monday is on $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "easter monday is on"
+                },
+                {
+                  "value": "2018-04-02",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2018-04-02\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 17900
+            },
+            {
+              "name": "pentecost sunday is on $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "pentecost sunday is on"
+                },
+                {
+                  "value": "2018-05-20",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2018-05-20\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 25000
+            },
+            {
+              "name": "pentecost monday is on $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "pentecost monday is on"
+                },
+                {
+                  "value": "2018-05-21",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2018-05-21\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 26400
+            },
+            {
+              "name": "ascension is on $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "ascension is on"
+                },
+                {
+                  "value": "2018-05-10",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2018-05-10\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 27300
+            },
+            {
+              "name": "corpus christi is on $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "corpus christi is on"
+                },
+                {
+                  "value": "2018-05-31",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2018-05-31\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1183500
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 130611900
+        }
+      ],
+      "durationInNanos": 130611900,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.feiertage.test.FeiertagServiceImplTest",
+      "testMethodName": "scenario_calculate_day_of_prayer_and_repentance_2020_in_Sachsen",
+      "description": "scenario calculate day of prayer and repentance 2020 in Sachsen",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "the year $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the year"
+                },
+                {
+                  "value": "2020",
+                  "argumentInfo": {
+                    "argumentName": "jahr",
+                    "formattedValue": "\"2020\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 21300
+            },
+            {
+              "name": "state is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "state is"
+                },
+                {
+                  "value": "Freistaat Sachsen",
+                  "argumentInfo": {
+                    "argumentName": "name",
+                    "formattedValue": "\"Freistaat Sachsen\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 656700
+            },
+            {
+              "name": "calculate holidays",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate holidays"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 176600
+            },
+            {
+              "name": "day of prayer and repentance is on $",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "day of prayer and repentance is on"
+                },
+                {
+                  "value": "2020-11-18",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2020-11-18\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1582600
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 7935400
+        }
+      ],
+      "durationInNanos": 7935400,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.feiertage.test.FeiertagServiceImplTest",
+      "testMethodName": "scenario_calculate_day_of_prayer_and_repentance_2021_in_Sachsen",
+      "description": "scenario calculate day of prayer and repentance 2021 in Sachsen",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "the year $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the year"
+                },
+                {
+                  "value": "2021",
+                  "argumentInfo": {
+                    "argumentName": "jahr",
+                    "formattedValue": "\"2021\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 34700
+            },
+            {
+              "name": "state is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "state is"
+                },
+                {
+                  "value": "Freistaat Sachsen",
+                  "argumentInfo": {
+                    "argumentName": "name",
+                    "formattedValue": "\"Freistaat Sachsen\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 926400
+            },
+            {
+              "name": "calculate holidays",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate holidays"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 179500
+            },
+            {
+              "name": "day of prayer and repentance is on $",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "day of prayer and repentance is on"
+                },
+                {
+                  "value": "2021-11-17",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2021-11-17\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 534400
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 6677400
+        }
+      ],
+      "durationInNanos": 6677400,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.feiertage.test.FeiertagServiceImplTest",
+      "testMethodName": "scenario_calculate_mobile_holidays_2018_in_Sachsen",
+      "description": "scenario calculate mobile holidays 2018 in Sachsen",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "the year $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the year"
+                },
+                {
+                  "value": "2018",
+                  "argumentInfo": {
+                    "argumentName": "jahr",
+                    "formattedValue": "\"2018\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 21600
+            },
+            {
+              "name": "state is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "state is"
+                },
+                {
+                  "value": "Freistaat Sachsen",
+                  "argumentInfo": {
+                    "argumentName": "name",
+                    "formattedValue": "\"Freistaat Sachsen\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 813400
+            },
+            {
+              "name": "calculate holidays",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate holidays"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 363300
+            },
+            {
+              "name": "good friday is on $",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "good friday is on"
+                },
+                {
+                  "value": "2018-03-30",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2018-03-30\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 33200
+            },
+            {
+              "name": "easter monday is on $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "easter monday is on"
+                },
+                {
+                  "value": "2018-04-02",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2018-04-02\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 18900
+            },
+            {
+              "name": "pentecost sunday is on $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "pentecost sunday is on"
+                },
+                {
+                  "value": "2018-05-20",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2018-05-20\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 48900
+            },
+            {
+              "name": "pentecost monday is on $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "pentecost monday is on"
+                },
+                {
+                  "value": "2018-05-21",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2018-05-21\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 31300
+            },
+            {
+              "name": "ascension is on $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "ascension is on"
+                },
+                {
+                  "value": "2018-05-10",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2018-05-10\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 15700
+            },
+            {
+              "name": "day of prayer and repentance is on $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "day of prayer and repentance is on"
+                },
+                {
+                  "value": "2018-11-21",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2018-11-21\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 499000
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 9485500
+        }
+      ],
+      "durationInNanos": 9485500,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.feiertage.test.FeiertagServiceImplTest",
+      "testMethodName": "scenario_calculate_day_of_prayer_and_repentance_2019_in_Sachsen",
+      "description": "scenario calculate day of prayer and repentance 2019 in Sachsen",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "the year $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the year"
+                },
+                {
+                  "value": "2019",
+                  "argumentInfo": {
+                    "argumentName": "jahr",
+                    "formattedValue": "\"2019\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 39300
+            },
+            {
+              "name": "state is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "state is"
+                },
+                {
+                  "value": "Freistaat Sachsen",
+                  "argumentInfo": {
+                    "argumentName": "name",
+                    "formattedValue": "\"Freistaat Sachsen\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 329400
+            },
+            {
+              "name": "calculate holidays",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate holidays"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 140100
+            },
+            {
+              "name": "day of prayer and repentance is on $",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "day of prayer and repentance is on"
+                },
+                {
+                  "value": "2019-11-20",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2019-11-20\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 497600
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 4569200
+        }
+      ],
+      "durationInNanos": 4569200,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.feiertage.test.FeiertagServiceImplTest",
+      "testMethodName": "scenario_calculate_easter_2018",
+      "description": "scenario calculate easter 2018",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "the year $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the year"
+                },
+                {
+                  "value": "2018",
+                  "argumentInfo": {
+                    "argumentName": "jahr",
+                    "formattedValue": "\"2018\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 37700
+            },
+            {
+              "name": "state is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "state is"
+                },
+                {
+                  "value": "Hessen",
+                  "argumentInfo": {
+                    "argumentName": "name",
+                    "formattedValue": "\"Hessen\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 540500
+            },
+            {
+              "name": "calculate holidays",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate holidays"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 164500
+            },
+            {
+              "name": "easter sunday is on $",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "easter sunday is on"
+                },
+                {
+                  "value": "2018-04-01",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2018-04-01\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1091000
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 6414600
+        }
+      ],
+      "durationInNanos": 6414600,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.feiertage.test.FeiertagServiceImplTest",
+      "testMethodName": "scenario_calculate_easter_2019",
+      "description": "scenario calculate easter 2019",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "the year $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the year"
+                },
+                {
+                  "value": "2019",
+                  "argumentInfo": {
+                    "argumentName": "jahr",
+                    "formattedValue": "\"2019\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 38400
+            },
+            {
+              "name": "state is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "state is"
+                },
+                {
+                  "value": "Hessen",
+                  "argumentInfo": {
+                    "argumentName": "name",
+                    "formattedValue": "\"Hessen\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 540100
+            },
+            {
+              "name": "calculate holidays",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate holidays"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 270100
+            },
+            {
+              "name": "easter sunday is on $",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "easter sunday is on"
+                },
+                {
+                  "value": "2019-04-21",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2019-04-21\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 844700
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 6068800
+        }
+      ],
+      "durationInNanos": 6068800,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.feiertage.test.FeiertagServiceImplTest",
+      "testMethodName": "scenario_calculate_easter_2020",
+      "description": "scenario calculate easter 2020",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "the year $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the year"
+                },
+                {
+                  "value": "2020",
+                  "argumentInfo": {
+                    "argumentName": "jahr",
+                    "formattedValue": "\"2020\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 56200
+            },
+            {
+              "name": "state is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "state is"
+                },
+                {
+                  "value": "Hessen",
+                  "argumentInfo": {
+                    "argumentName": "name",
+                    "formattedValue": "\"Hessen\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 644500
+            },
+            {
+              "name": "calculate holidays",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate holidays"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 204100
+            },
+            {
+              "name": "easter sunday is on $",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "easter sunday is on"
+                },
+                {
+                  "value": "2020-04-12",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2020-04-12\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 706000
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 6436500
+        }
+      ],
+      "durationInNanos": 6436500,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.feiertage.test.FeiertagServiceImplTest",
+      "testMethodName": "scenario_calculate_easter_2021",
+      "description": "scenario calculate easter 2021",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "the year $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the year"
+                },
+                {
+                  "value": "2021",
+                  "argumentInfo": {
+                    "argumentName": "jahr",
+                    "formattedValue": "\"2021\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 20500
+            },
+            {
+              "name": "state is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "state is"
+                },
+                {
+                  "value": "Hessen",
+                  "argumentInfo": {
+                    "argumentName": "name",
+                    "formattedValue": "\"Hessen\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 532000
+            },
+            {
+              "name": "calculate holidays",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate holidays"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 288300
+            },
+            {
+              "name": "easter sunday is on $",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "easter sunday is on"
+                },
+                {
+                  "value": "2021-04-04",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2021-04-04\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 627000
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 7143300
+        }
+      ],
+      "durationInNanos": 7143300,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.feiertage.test.FeiertagServiceImplTest",
+      "testMethodName": "scenario_calculate_easter_2022",
+      "description": "scenario calculate easter 2022",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "the year $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "the year"
+                },
+                {
+                  "value": "2022",
+                  "argumentInfo": {
+                    "argumentName": "jahr",
+                    "formattedValue": "\"2022\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 92700
+            },
+            {
+              "name": "state is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "state is"
+                },
+                {
+                  "value": "Hessen",
+                  "argumentInfo": {
+                    "argumentName": "name",
+                    "formattedValue": "\"Hessen\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 605700
+            },
+            {
+              "name": "calculate holidays",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "calculate holidays"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 311200
+            },
+            {
+              "name": "easter sunday is on $",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "easter sunday is on"
+                },
+                {
+                  "value": "2022-04-17",
+                  "argumentInfo": {
+                    "argumentName": "expected",
+                    "formattedValue": "\"2022-04-17\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1159100
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 7298000
+        }
+      ],
+      "durationInNanos": 7298000,
+      "executionStatus": "SUCCESS"
+    }
+  ],
+  "tagMap": {}
+}

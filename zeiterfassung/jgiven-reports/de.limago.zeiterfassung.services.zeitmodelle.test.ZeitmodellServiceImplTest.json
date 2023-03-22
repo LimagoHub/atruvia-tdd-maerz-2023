@@ -1,0 +1,1234 @@
+{
+  "className": "de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest",
+  "name": "Zeitmodell Service Impl",
+  "scenarios": [
+    {
+      "className": "de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest",
+      "testMethodName": "scenario_find_zeitmodell_mit_primaerschluessel",
+      "description": "scenario find zeitmodell mit primaerschluessel",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "zeitmodell with pk $ exists in database",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "zeitmodell with pk"
+                },
+                {
+                  "value": "5c88d4c5-4c8a-45f6-85f0-170ff4112427",
+                  "argumentInfo": {
+                    "argumentName": "primaerSchluessel",
+                    "formattedValue": "\"5c88d4c5-4c8a-45f6-85f0-170ff4112427\""
+                  }
+                },
+                {
+                  "value": "exists in database"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 10199800
+            },
+            {
+              "name": "find zeitmodell by pk",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "find zeitmodell by pk"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 49779600
+            },
+            {
+              "name": "zeitmodell was loaded from database",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "zeitmodell was loaded from database"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 4162300
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 171357500
+        }
+      ],
+      "durationInNanos": 171357500,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest",
+      "testMethodName": "Scenario_save_Zeitmodell_ID_isNull",
+      "description": "Scenario save Zeitmodell ID isNull",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "new Zeiterfassung with bezeichnung $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "new Zeiterfassung with bezeichnung"
+                },
+                {
+                  "value": "DummyModell",
+                  "argumentInfo": {
+                    "argumentName": "bezeichnung",
+                    "formattedValue": "\"DummyModell\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 12483600
+            },
+            {
+              "name": "id is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "id is"
+                },
+                {
+                  "value": "null",
+                  "argumentInfo": {
+                    "argumentName": "id",
+                    "formattedValue": "\"null\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 594100
+            },
+            {
+              "name": "save Zeitmodell",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "save Zeitmodell"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 44027601
+            },
+            {
+              "name": "expected ZeitmodellServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected ZeitmodellServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 20800
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "ID darf nicht leer sein.",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"ID darf nicht leer sein.\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 598301
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 73486300
+        }
+      ],
+      "durationInNanos": 73486300,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest",
+      "testMethodName": "scenario_delete_zeitmodell_should_succeed_if_not_active",
+      "description": "scenario delete zeitmodell should succeed if not active",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "zeitmodell with pk $ exists in database",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "zeitmodell with pk"
+                },
+                {
+                  "value": "5c88d4c5-4c8a-45f6-85f0-170ff4112428",
+                  "argumentInfo": {
+                    "argumentName": "primaerSchluessel",
+                    "formattedValue": "\"5c88d4c5-4c8a-45f6-85f0-170ff4112428\""
+                  }
+                },
+                {
+                  "value": "exists in database"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 27599
+            },
+            {
+              "name": "no mitarbeiter using this zeitmodell exists",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "no mitarbeiter using this zeitmodell exists"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 178199
+            },
+            {
+              "name": "delete zeitmodell",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "delete zeitmodell"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 45373200
+            },
+            {
+              "name": "zeitmodell is deleted in database",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "zeitmodell is deleted in database"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 9621599
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 69104600
+        }
+      ],
+      "durationInNanos": 69104600,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest",
+      "testMethodName": "scenario_find_mitarbeiter_by_zeitmodell",
+      "description": "scenario find mitarbeiter by zeitmodell",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "zeitmodell with pk $ exists in database",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "zeitmodell with pk"
+                },
+                {
+                  "value": "5c88d4c5-4c8a-45f6-85f0-170ff4112427",
+                  "argumentInfo": {
+                    "argumentName": "primaerSchluessel",
+                    "formattedValue": "\"5c88d4c5-4c8a-45f6-85f0-170ff4112427\""
+                  }
+                },
+                {
+                  "value": "exists in database"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 578499
+            },
+            {
+              "name": "find mitarbeiter by zeitmodell",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "find mitarbeiter by zeitmodell"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 30883699
+            },
+            {
+              "name": "find all mitarbeiter to zeitmodell",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "find all mitarbeiter to zeitmodell"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 4364600
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 47662700
+        }
+      ],
+      "durationInNanos": 47662700,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest",
+      "testMethodName": "Scenario_save_Zeitmodell_isNull",
+      "description": "Scenario save Zeitmodell isNull",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "zeitmodell is null",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "zeitmodell is null"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 93800
+            },
+            {
+              "name": "save Zeitmodell",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "save Zeitmodell"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 372901
+            },
+            {
+              "name": "expected ZeitmodellServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected ZeitmodellServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 13401
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Nullwert ist nicht erlaubt",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Nullwert ist nicht erlaubt\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 538000
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 12477501
+        }
+      ],
+      "durationInNanos": 12477501,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest",
+      "testMethodName": "Scenario_save_Zeitmodell_and_Bezeichnung_is_to_long",
+      "description": "Scenario save Zeitmodell and Bezeichnung is to long",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "new Zeiterfassung with bezeichnung $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "new Zeiterfassung with bezeichnung"
+                },
+                {
+                  "value": "01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789",
+                  "argumentInfo": {
+                    "argumentName": "bezeichnung",
+                    "formattedValue": "\"01234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 765200
+            },
+            {
+              "name": "save Zeitmodell",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "save Zeitmodell"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1402200
+            },
+            {
+              "name": "expected ZeitmodellServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected ZeitmodellServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 13900
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Bezeichnung muss mindestens 6 und maximal 255 Buchstaben haben.",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Bezeichnung muss mindestens 6 und maximal 255 Buchstaben haben.\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 566400
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 15871801
+        }
+      ],
+      "durationInNanos": 15871801,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest",
+      "testMethodName": "Scenario_save_non_active_Zeitmodell_should_succeed",
+      "description": "Scenario save non active Zeitmodell should succeed",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "new Zeiterfassung with bezeichnung $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "new Zeiterfassung with bezeichnung"
+                },
+                {
+                  "value": "DummyModell",
+                  "argumentInfo": {
+                    "argumentName": "bezeichnung",
+                    "formattedValue": "\"DummyModell\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 15200
+            },
+            {
+              "name": "id is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "id is"
+                },
+                {
+                  "value": "5c88d4c5-4c8a-45f6-85f0-170ff4112420",
+                  "argumentInfo": {
+                    "argumentName": "id",
+                    "formattedValue": "\"5c88d4c5-4c8a-45f6-85f0-170ff4112420\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 474000
+            },
+            {
+              "name": "save Zeitmodell",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "save Zeitmodell"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 15436499
+            },
+            {
+              "name": "zeitmodell is saved in db",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "zeitmodell is saved in db"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1298701
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 30060301
+        }
+      ],
+      "durationInNanos": 30060301,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest",
+      "testMethodName": "Scenario_save_Zeitmodell_and_id_is_toShort",
+      "description": "Scenario save Zeitmodell and id is toShort",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "new Zeiterfassung with bezeichnung $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "new Zeiterfassung with bezeichnung"
+                },
+                {
+                  "value": "DummyModell",
+                  "argumentInfo": {
+                    "argumentName": "bezeichnung",
+                    "formattedValue": "\"DummyModell\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 15200
+            },
+            {
+              "name": "id $ is to short",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "id"
+                },
+                {
+                  "value": "012345678901234567890123456789",
+                  "argumentInfo": {
+                    "argumentName": "id",
+                    "formattedValue": "\"012345678901234567890123456789\""
+                  }
+                },
+                {
+                  "value": "is to short"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 445200
+            },
+            {
+              "name": "save Zeitmodell",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "save Zeitmodell"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 3494000
+            },
+            {
+              "name": "expected ZeitmodellServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected ZeitmodellServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 15599
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Id muss genau 36 Zeichen lang sein",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Id muss genau 36 Zeichen lang sein\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 679600
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 18817299
+        }
+      ],
+      "durationInNanos": 18817299,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest",
+      "testMethodName": "Scenario_save_Zeitmodell_and_id_is_to_long",
+      "description": "Scenario save Zeitmodell and id is to long",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "new Zeiterfassung with bezeichnung $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "new Zeiterfassung with bezeichnung"
+                },
+                {
+                  "value": "DummyModell",
+                  "argumentInfo": {
+                    "argumentName": "bezeichnung",
+                    "formattedValue": "\"DummyModell\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 14600
+            },
+            {
+              "name": "id $ is to long",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "id"
+                },
+                {
+                  "value": "0123456789012345678901234567890123456789",
+                  "argumentInfo": {
+                    "argumentName": "id",
+                    "formattedValue": "\"0123456789012345678901234567890123456789\""
+                  }
+                },
+                {
+                  "value": "is to long"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 626800
+            },
+            {
+              "name": "save Zeitmodell",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "save Zeitmodell"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1100100
+            },
+            {
+              "name": "expected ZeitmodellServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected ZeitmodellServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 14700
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Id muss genau 36 Zeichen lang sein",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Id muss genau 36 Zeichen lang sein\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 552699
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 15195600
+        }
+      ],
+      "durationInNanos": 15195600,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest",
+      "testMethodName": "Scenario_save_active_Zeitmodell_should_fail",
+      "description": "Scenario save active Zeitmodell should fail",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "new Zeiterfassung with bezeichnung $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "new Zeiterfassung with bezeichnung"
+                },
+                {
+                  "value": "DummyModell",
+                  "argumentInfo": {
+                    "argumentName": "bezeichnung",
+                    "formattedValue": "\"DummyModell\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 29500
+            },
+            {
+              "name": "id is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "id is"
+                },
+                {
+                  "value": "5c88d4c5-4c8a-45f6-85f0-170ff4112427",
+                  "argumentInfo": {
+                    "argumentName": "id",
+                    "formattedValue": "\"5c88d4c5-4c8a-45f6-85f0-170ff4112427\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 555601
+            },
+            {
+              "name": "save Zeitmodell",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "save Zeitmodell"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 4706600
+            },
+            {
+              "name": "expected ZeitmodellServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected ZeitmodellServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 17200
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Dieses Zeitmodell wird noch verwendet und darf deswegen weder gelöscht noch geändert werden.",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Dieses Zeitmodell wird noch verwendet und darf deswegen weder gelöscht noch geändert werden.\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 695300
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 18642000
+        }
+      ],
+      "durationInNanos": 18642000,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest",
+      "testMethodName": "scenario_delete_zeitmodell_should_fail_if_active",
+      "description": "scenario delete zeitmodell should fail if active",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "zeitmodell with pk $ exists in database",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "zeitmodell with pk"
+                },
+                {
+                  "value": "5c88d4c5-4c8a-45f6-85f0-170ff4112427",
+                  "argumentInfo": {
+                    "argumentName": "primaerSchluessel",
+                    "formattedValue": "\"5c88d4c5-4c8a-45f6-85f0-170ff4112427\""
+                  }
+                },
+                {
+                  "value": "exists in database"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 16401
+            },
+            {
+              "name": "some mitarbeiter using this zeitmodell exists",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "some mitarbeiter using this zeitmodell exists"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 93599
+            },
+            {
+              "name": "delete zeitmodell",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "delete zeitmodell"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 4926899
+            },
+            {
+              "name": "expected ZeitmodellServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected ZeitmodellServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 15500
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Dieses Zeitmodell wird noch verwendet und darf deswegen weder gelöscht noch geändert werden.",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Dieses Zeitmodell wird noch verwendet und darf deswegen weder gelöscht noch geändert werden.\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 650800
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 20590400
+        }
+      ],
+      "durationInNanos": 20590400,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest",
+      "testMethodName": "scenario_find_all_zeitmodelle",
+      "description": "scenario find all zeitmodelle",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "find all zeitmodelle",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "find all zeitmodelle"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 2782100
+            },
+            {
+              "name": "all zeitmodelle where loaded from database",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "all zeitmodelle where loaded from database"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 809199
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 14743201
+        }
+      ],
+      "durationInNanos": 14743201,
+      "executionStatus": "SUCCESS"
+    },
+    {
+      "className": "de.limago.zeiterfassung.services.zeitmodelle.test.ZeitmodellServiceImplTest",
+      "testMethodName": "Scenario_save_Zeitmodell_and_Bezeichnung_is_to_short",
+      "description": "Scenario save Zeitmodell and Bezeichnung is to short",
+      "tagIds": [],
+      "explicitParameters": [],
+      "derivedParameters": [],
+      "casesAsTable": false,
+      "scenarioCases": [
+        {
+          "caseNr": 1,
+          "steps": [
+            {
+              "name": "new Zeiterfassung with bezeichnung $",
+              "words": [
+                {
+                  "value": "Given",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "new Zeiterfassung with bezeichnung"
+                },
+                {
+                  "value": "01234",
+                  "argumentInfo": {
+                    "argumentName": "bezeichnung",
+                    "formattedValue": "\"01234\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 794300
+            },
+            {
+              "name": "save Zeitmodell",
+              "words": [
+                {
+                  "value": "When",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "save Zeitmodell"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 1273900
+            },
+            {
+              "name": "expected ZeitmodellServiceException is thrown",
+              "words": [
+                {
+                  "value": "Then",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected ZeitmodellServiceException is thrown"
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 17600
+            },
+            {
+              "name": "expected errormessage is $",
+              "words": [
+                {
+                  "value": "and",
+                  "isIntroWord": true
+                },
+                {
+                  "value": "expected errormessage is"
+                },
+                {
+                  "value": "Bezeichnung muss mindestens 6 und maximal 255 Buchstaben haben.",
+                  "argumentInfo": {
+                    "argumentName": "message",
+                    "formattedValue": "\"Bezeichnung muss mindestens 6 und maximal 255 Buchstaben haben.\""
+                  }
+                }
+              ],
+              "status": "PASSED",
+              "durationInNanos": 647901
+            }
+          ],
+          "explicitArguments": [],
+          "derivedArguments": [],
+          "status": "SUCCESS",
+          "success": true,
+          "durationInNanos": 15280200
+        }
+      ],
+      "durationInNanos": 15280200,
+      "executionStatus": "SUCCESS"
+    }
+  ],
+  "tagMap": {}
+}
