@@ -57,8 +57,16 @@ public class Euro2DollarPresenterImpl implements de.atruvia.gui.presenter.Euro2D
 		// ergebnis in Maske schreiben
 		// Fehler immer in Dollarfeld schreiben
 		// RuntimeException abfangen und Meldung im Dollarfeld ausgeben
-		
-
+		try {
+			view.setDollar(String.format("%.2f", model.calculateEuro2Dollar(Double.valueOf(view.getEuro()))));
+		} catch (NullPointerException e) {
+			view.setDollar("Eingabe erforderlich");
+		} catch (NumberFormatException e) {
+			view.setDollar("Keine Zahl");
+		} catch (RuntimeException e) {
+			view.setDollar("interner Fehler");
+		}
+		return;
 	}
 	
 	/* (non-Javadoc)
@@ -68,7 +76,6 @@ public class Euro2DollarPresenterImpl implements de.atruvia.gui.presenter.Euro2D
 	public void onBeenden() {  
 		view.close();
 	}
-	
 	/* (non-Javadoc)
 	 * @see de.gui.presenter.IEuro2DollarPresenter#populateItems()
 	 */
@@ -76,12 +83,18 @@ public class Euro2DollarPresenterImpl implements de.atruvia.gui.presenter.Euro2D
 	public void onPopulateItems() {
 		// den String "0" jeweils in das Eurofeld und das Dollarfeld der Maske schreiben
 		// und den Rechnenbutton enablen
+		view.setEuro("0");
+		view.setDollar("0");
+		view.setRechnenEnabled(true);
 	}
 
 	@Override
 	public void updateRechnenActionState() {
-
-		
+		try {
+			Double.valueOf(view.getEuro());
+			view.setRechnenEnabled(true);
+		} catch (RuntimeException e) {
+			view.setRechnenEnabled(false);
+		}
 	}
-
 }
